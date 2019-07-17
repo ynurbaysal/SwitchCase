@@ -104,5 +104,30 @@ namespace WFA_SwitchCase
             //KullaniciAdi = "bilgeadam";
             //Sifre = "1234";
         }
+
+        private void BtnOrnek4_Click(object sender, EventArgs e)
+        {
+            // C#7 ile gelen yeni özellikte artık küçüklük büyüklük, küçük eşit büyük eşit gibi tüm durumlarıda artık kontrol edebiliyoruz. 
+            // NOT :  visual studio 2017'de kullanabiliyor. 2015 kullanılıyor ise, örnek çalışmaz 
+
+
+            int sayi = int.Parse(txtGelenDeger1.Text);
+
+            string mesaj = "Sayı 100' ";
+            switch (sayi)
+            { 
+                case int s when (s > 100):
+                    mesaj += "den büyüktür";
+                    break; 
+                case int s when (s < 100):
+                    mesaj += "den küçüktür";
+                    break; 
+                default:
+                    mesaj += "e eşittir";
+                    break;
+            }
+            MessageBox.Show(mesaj);
+
+        }
     }
 }

@@ -93,6 +93,7 @@
             this.btnOrnek4.TabIndex = 1;
             this.btnOrnek4.Text = "C#7 Gelen Özellik";
             this.btnOrnek4.UseVisualStyleBackColor = true;
+            this.btnOrnek4.Click += new System.EventHandler(this.BtnOrnek4_Click);
             // 
             // button1
             // 
